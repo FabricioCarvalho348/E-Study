@@ -1,0 +1,6 @@
+services:
+  estudy.api:
+    image: estudy.api
+    build:
+      context: .
+      dockerfile: src/backend/EStudy.Api/Dockerfile
