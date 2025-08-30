@@ -18,4 +18,10 @@
       </Content>
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\EStudy.Application\EStudy.Application.csproj" />
+      <ProjectReference Include="..\EStudy.Communication\EStudy.Communication.csproj" />
+      <ProjectReference Include="..\EStudy.Exception\EStudy.Exception.csproj" />
+    </ItemGroup>
+
 </Project>

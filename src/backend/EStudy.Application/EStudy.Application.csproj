@@ -6,4 +6,10 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\EStudy.Communication\EStudy.Communication.csproj" />
+      <ProjectReference Include="..\EStudy.Domain\EStudy.Domain.csproj" />
+      <ProjectReference Include="..\EStudy.Exception\EStudy.Exception.csproj" />
+    </ItemGroup>
+
 </Project>
