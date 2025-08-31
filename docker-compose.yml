@@ -1,6 +1,18 @@
-services:
-  estudy.api:
-    image: estudy.api
+﻿services:
+  estudy-api:
     build:
       context: .
       dockerfile: src/backend/EStudy.Api/Dockerfile
+      args:
+        APP_UID: ${APP_UID}
+        APP_GID: ${APP_GID}
+        ASPNETCORE_URLS: ${ASPNETCORE_URLS}
+        DOTNET_RUNNING_IN_CONTAINER: ${DOTNET_RUNNING_IN_CONTAINER}
+        DOTNET_SYSTEM_GLOBALIZATION_INVARIANT: ${DOTNET_SYSTEM_GLOBALIZATION_INVARIANT}
+        NUGET_XMLDOC_MODE: ${NUGET_XMLDOC_MODE}
+        ASPNETCORE_ENVIRONMENT: ${ASPNETCORE_ENVIRONMENT}
+    env_file:
+      - .env
+    ports:
+      - "5000:8080"
+      - "5001:8081"
